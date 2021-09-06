@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aqui encontraras todas las camisetas de las seleccion que mas te gusten, de todo el mundo.">
+    <meta name="keywords" content="FUBTOL, CAMISETAS, SELECCION, ARGENTINA, ITALIA, BRASIL, ALEMANIA.">
+    <title>Lupetto Indumentaria Deportiva - Nacionales</title>
+    <link rel="stylesheet" href="scss/estilo.css">
+
+    <!-- LINK DE GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <!-- LINK DE WOW -->
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  /> 
+
+</head>
+<body class="body1">
+    <div class="contenedor">
+        <header class="header">
+            <div class="animate__animated animate__tada">
+                <img src="Imagenes png/Lupetto imagen.png" alt="" class="logo-lupetto">
+            </div>
+            <h1 class="nombre animate__animated animate__fadeInDown">Lupetto Indumentaria Deportiva </h1>
+            
+        </header>
+        <nav>
+            <ul class="flexboxpadre">
+                <li id="animacion"><a href="index.html">Inicio</a></li>
+                <li class="dropdown">
+                    <a href="clubes.html" class="dropbtn">Clubes</a>
+                    <div class="dropdown-content">
+                        <a href="clubes.html">Argentina</a>
+                        <a href="clubes.html">Alemania</a>
+                        <a href="clubes.html">España</a>
+                        <a href="clubes.html">Inglaterra</a>
+                        <a href="clubes.html">Italia</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="nacionales.html" class="dropbtn">Nacionales</a>
+                <div class="dropdown-content">
+                    <a href="nacionales.html"> Africa</a>
+                    <a href="nacionales.html">America del norte</a>
+                    <a href="nacionales.html">America del sur</a>
+                    <a href="nacionales.html">Asia</a>
+                    <a href="nacionales.html">Europa</a>
+                </div>
+                </li>
+                <li><a href="accesorios.html">Accesorios</a></li>
+                <li><a href="ofertas.html">Ofertas</a></li>
+            </ul>
+        </nav>
+    
+    <aside class="sidebar">
+            <form class="filtro" action="codigo.php" method="POST">
+            <div class="categorias1">
+                <p>Género:</p>
+                    <label><input type="radio" name="genero" value="hombre">Hombre</label>
+                    <label><input type="radio" name="genero" value="mujer">Mujer</label>
+                    <label><input type="radio" name="genero" value="niños">Niños</label>
+            </div>
+            <div class="categorias2">
+                <p>Marca:</p>
+                    <label><input type="checkbox" name="marcas" value="adidas">Adidas</label>
+                    <label><input type="checkbox" name="marcas" value="kappa">Kappa</label>
+                    <label><input type="checkbox" name="marcas" value="nike">Nike</label>
+                    <label><input type="checkbox" name="marcas" value="puma">Puma</label>
+                    <label><input type="checkbox" name="marcas" value="umbro">Umbro</label>
+            </div>
+            <div class="categorias3">
+                <p>Talle:</p>
+                    <label><input type="checkbox" name="talle" value="xs">XS</label>
+                    <label><input type="checkbox" name="talle" value="s">S</label>
+                    <label><input type="checkbox" name="talle" value="m">M</label>
+                    <label><input type="checkbox" name="talle" value="l">L</label>
+                    <label><input type="checkbox" name="talle" value="xl">XL</label>
+                    <label><input type="checkbox" name="talle" value="xxl">XXL</label>
+            </div>
+            <div class="categorias4">
+                <p>Precio:</p>
+                    <div> <label><input type="checkbox" name="precio" value="$1000-$2499">$1.000 - $2.499</label></div>
+                    <div><label><input type="checkbox" name="precio" value="$2500-$4999">$2.500 - $4.999</label></div>
+                    <div><label><input type="checkbox" name="precio" value="$5000-$9999">$5.000 - $9.999</label></div>
+                    <div><label><input type="checkbox" name="precio" value="$10000-$19999">$10.000 - $19.999</label></div>
+            </div>
+            </form>
+    </aside>
+
+<article class="padregrid">
+    <div class="grid1 hijo-flex">
+        <img src="Imagenes png/Alemania.png" class="imagen1" alt="">
+        <h3>Camiseta visitante Selección Alemana</h3>
+        <p class="precio">$11.499</p>
+        <button type="button">Comprar</button>
+    </div>
+    <div class="grid2 hijo-flex1">
+        <img src="Imagenes png/Argentina.png" class="imagen2" alt="">
+        <h3>Camiseta local Selección Argentina</h3>
+        <p>$11.499</p>
+        <button type="button">Comprar</button>
+    </div>
+    <div class="grid3 hijo-flex2">
+        <img src="Imagenes png/España.png" class="imagen3" alt="">
+        <h3>Camiseta local Selección España</h3>
+        <p>$11.499</p>
+        <button type="button">Comprar</button>
+    </div>
+    <div class="grid4 hijo-flex">
+        <img src="Imagenes png/Italia Visitante.png" class="imagen1" alt="">
+        <h3>Camiseta visitante Selección Italia 2021</h3>
+        <p class="precio">$7.999</p>
+        <button type="button">Comprar</button>
+    </div>
+    <div class="grid5 hijo-flex1">
+        <img src="Imagenes png/Nigeria Local.png" class="imagen2" alt="">
+        <h3>Camiseta local Selección Nigeria 2020</h3>
+        <p>$8.299</p>
+        <button type="button">Comprar</button>
+    </div>
+    <div class="grid6 hijo-flex2">
+        <img src="Imagenes png/Uruguay Home.png" class="imagen3" alt="">
+        <h3>Camiseta local Selección Uruguay 2021</h3>
+        <p>$8.999</p>
+        <button type="button">Comprar</button>
+    </div>
+</article>
+
+<footer class="footer">
+    <div class="footer-2">
+        <p class="p-footer1">Teléfono: (011) 4644-2425</p>
+        <p class="p-footer2">Dirección: Av. 9 de Julio s/n, C1043 CABA</p>
+        <p class="p-footer3">Horarios: L a V: 10:00 - 20:00 / S: 10:00 - 15:00</p>
+        <a href="contacto.html" class="p-footer4">Contacto</a>
+</div>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.0168878895174!2d-58.38375908505232!3d-34.603734465005445!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4aa9f0a6da5edb%3A0x11bead4e234e558b!2sObelisco!5e0!3m2!1ses-419!2sar!4v1628178028861!5m2!1ses-419!2sar" width="500" height="300" style="border:0;" allowfullscreen="" loading="lazy">
+</iframe>
+</footer>
+</div>
+
+
+</body>
+</html>
