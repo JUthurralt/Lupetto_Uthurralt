@@ -424,7 +424,7 @@ $mapawidget: (
 // MOBILE SOLO DEL INDEX
 
 
-@media screen and (max-width: 320px) {
+@media screen and (min-width: 320px) {
     .contenedor-index {
         display: grid;
         grid-template-columns: 1fr;

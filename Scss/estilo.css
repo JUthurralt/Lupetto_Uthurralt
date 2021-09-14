@@ -551,7 +551,7 @@ nav {
   grid-area: footergrid-p;
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (min-width: 320px) {
   .contenedor-index {
     display: -ms-grid;
     display: grid;
