@@ -214,8 +214,6 @@ nav ul {
 }
 
 article {
-    // width: 100%;
-    // max-width: 660px;
     margin-left: 0%;
     
 }
@@ -335,9 +333,9 @@ body {
     grid-row-gap: 5px;
     grid-template-columns: 1fr, 1fr;
     grid-template-rows: auto, auto, auto, auto, auto;
-    grid-template-areas:    "header header"
+    grid-template-areas:    "header-p header-p"
                             "nav nav"
-                            "sidebar padregrid"
+                            "sidebar-p padregrid"
                             "padregrid padregrid"
                             "footergrid-p footergrid-p";
 }
@@ -345,6 +343,7 @@ body {
 
 .contenedor > div,
 .contenedor .header,
+.coneneder  .nav
 .contenedor .padregrid,
 .contenedor .sidebar,
 .contenedor .footergrid-p {
@@ -386,7 +385,6 @@ body {
 
 .contenedor .padregrid {
     grid-area: padregrid;
-    // width: fit-content;
 }
 
 .imagen-contenido {
@@ -398,29 +396,23 @@ nav{
 }
 
 .contenedor .sidebar {
-    // grid-column: 3 / 4;
-    min-height: 50%;
+     min-height: 50%;
     grid-area: sidebar;
-    min-width: fit-content;
+     min-width: fit-content;
 }
 
 
 
 $mapawidget: (
-    widget1: rgb(55, 0, 255),
-    widget2: rgb(55, 0, 128),
-    widget3: rgb(146, 130, 238)
+    widget1: #4fafff,
+    widget2: #4fafff,
+    widget3: #4fafff
 );
 
 @each  $color, $widget in $mapawidget {
     .#{$color} {
         background-color: #{$widget};
     }
-}
-
-
-.footergrid {
-    grid-area: footergrid;
 }
 
 .footergrid-p {
@@ -566,7 +558,7 @@ $mapawidget: (
                             "sidebar padregrid"
                             "footergrid-p footergrid-p";
     }
-    .header1 {
+    .header {
         min-height: fit-content;
         line-height: normal;
         font-size: auto;
@@ -587,17 +579,9 @@ $mapawidget: (
         display: flex;
         flex-direction: column;
     }
-    footer {
+    .footergrid-p {
         min-height: 20px;
     }
-    #container-dudas {
-        display: flex;
-        flex-direction: column;
-        min-width: fit-content;
-        justify-content: center;
-        font-size: 30px;
-        max-height: 80%;
-        }
 }
 
 @media screen and (min-width: 576px) {
@@ -624,23 +608,7 @@ $mapawidget: (
     footer {
         min-height: 20px;
     }
-    #container-dudas {
-        display: flex;
-        flex-direction: column;
-        min-width: fit-content;
-        justify-content: center;
-        font-size: 30px;
-        max-height: 80%;
-        }
-    
-    #container-dudas {
-        display: flex;
-        flex-direction: column;
-        min-width: 150%;
-        justify-content: center;
-        font-size: 30px;
-        max-height: 90%;
-        }
+
 }
 
 @media screen and (min-width: 768px) {
@@ -656,15 +624,8 @@ $mapawidget: (
     }
     .padregrid {
         display: inline-flex;
-        
-    }
-    #container-dudas {
-        display: flex;
-        flex-direction: column;
-        min-width: 150%;
-        font-size: 30px;
-        max-height: 85%;
         }
+        
 }
 
 @media screen and (min-width:992px) {
@@ -678,13 +639,7 @@ $mapawidget: (
     .padregrid {
         display: grid;
         }
-    #container-dudas {
-        display: flex;
-        flex-direction: column;
-        min-width: 130%;
-        font-size: 30px;
-        max-height: 60%;
-        }
+    
 }
 
 @media screen and (min-width:1200px) {
@@ -699,7 +654,7 @@ $mapawidget: (
                             "footergrid-p footergrid-p footergrid-p";
     }
 
-    .header1 {
+    .header {
 
         min-height: fit-content;
         line-height: normal;
@@ -709,15 +664,11 @@ $mapawidget: (
         letter-spacing: 0px;
         word-spacing: 0px;
     }
-    #container-dudas {
-    display: flex;
-    flex-direction: column;
-    min-width: 130%;
-    font-size: 30px;
-    max-height: 60%;
-    }
     .padregrid {
         display: grid;
+    }
+    footer{
+        min-height: 0px;
     }
 }
 // TERMINA MOBILE DEMAS PAGINAS
@@ -733,7 +684,202 @@ $mapawidget: (
     h4 {
         font-size: 15px;
     }
+//  RESPONSIVE CONTACTO
 
+// .contenedor > div,
+// .contenedor .header-c,
+// .contenedor #dudas,
+// .contenedor #container-dudas,
+// .contenedor .footergrid-c {
+//     background: #e9ecfd;
+//     border-radius: 4px;
+// }
+
+// @media screen and (min-width: 320px) {
+//     .contenedor{
+//         display: grid;
+//         grid-template-columns: auto;
+//         grid-template-rows: auto auto auto auto;
+//         grid-template-areas:"header-c"
+//                             "nav-c"
+//                             "datos"
+//                             "container-dudas"
+//                             "footergrid-c";
+//     }
+//     #container-dudas {
+//         grid-area: container-dudas;
+//         display: flex;
+//         flex-direction: column;
+//         min-width: 100%;
+//         font-size: 30px;
+//         max-height: 90%;
+//     }
+// }
+
+// @media screen and (min-width: 576px) {
+//     .contenedor{
+//         display: grid;
+//         grid-template-columns: auto auto;
+//         grid-template-rows: auto auto auto auto auto;
+//         grid-template-areas:"header-c header-c"
+//                             "nav-c nav-c"
+//                             "datos container-dudas"
+//                             "datos container-dudas"
+//                             "footergrid-c footergrid-c";
+//     }
+//     #container-dudas {
+//         grid-area: container-dudas;
+//         display: flex;
+//         flex-direction: column;
+//         min-width: 100%;
+//         font-size: 30px;
+//         max-height: 65%;
+//     }
+// }
+
+// @media screen and (min-width: 768px) {
+//     .contenedor {
+//         display: grid;
+//         grid-template-columns: auto auto;
+//         grid-template-rows: auto auto auto auto auto;
+//         grid-template-areas:"header-c header-c"
+//                             "nav-c nav-c"
+//                             "datos container-dudas"
+//                             "datos container-dudas"
+//                             "footergrid-c footergrid-c";
+//     }
+// }
+
+// @media screen and (min-width:992px) {
+// .contenedor {
+//     grid-template-columns: auto auto auto;
+//         grid-template-rows: auto auto auto auto auto;
+//         grid-template-areas:"header-c header-c header-c"
+//                             "nav-c nav-c nav-c"
+//                             "datos datos container-dudas"
+//                             "datos datos container-dudas"
+//                             "footergrid-c footergrid-c footergrid-c";
+// }
+// }
+
+// @media screen and (min-width:1200px) {
+//     .contenedor {
+//         display: grid;
+//         grid-template-columns: auto auto auto;
+//         grid-template-rows: auto auto auto auto auto;
+//         grid-template-areas:"header-c header-c header-c"
+//                             "nav-c nav-c nav-c"
+//                             "datos datos container-dudas"
+//                             "datos datos container-dudas"
+//                             "footergrid-c footergrid-c footergrid-c";
+//     }
+
+    
+//     #datos {
+//         grid-area: datos;
+//     }
+//     #container-dudas {
+//         grid-area: container-dudas;
+//         display: flex;
+//         flex-direction: column;
+//         min-width: 90%;
+//         font-size: 30px;
+//         max-height: 60%;
+//     }
+// }
+
+// .header-c {
+//     grid-area: header-c;
+//     background: rgba(156, 211, 245, 0.753);
+//     color:rgb(69, 111, 112);
+//     background-image: linear-gradient(to bottom, cornsilk, rgba(156, 211, 245, 0.753));
+//     height: 100px;
+//     display: flex;
+//     flex-direction: row;
+//     justify-content: space-between;
+//     align-items: center; 
+//     padding: 30px 10%;
+// }
+
+// #nav-c {
+//     grid-area: nav-c;
+// }
+
+// .footergrid-c {
+//     grid-area: footergrid-c;
+// }
+// .footergrid-c {
+//     min-height: 100%;
+//     min-width: 100%;
+//     padding: 0px;
+//     display: grid;
+//     grid-template-columns: 1fr 1fr;
+//     grid-template-rows: 1fr;
+//     margin: 0%;
+    
+// }
+
+
+// .section-footer-c {
+//     display: grid;
+//     grid-template-columns: 1fr 1fr;
+//     grid-template-rows: 1fr 1fr;
+//     grid-template-areas: "uno dos"
+//                         "tres cuatro";
+// }
+
+// .section-footer-c {
+    
+//     min-width: 200%;
+//     background-color: #5783bc;
+//     font-size: 18px;
+    
+    
+    
+//     .div-footer1-c,
+//     .div-footer2-c, 
+//     .div-footer3-c,
+//     .div-footer4-c {
+
+//         padding: 18% 0%;
+
+//     }
+//         p, h6 {
+//         display: flex;
+//         align-items: center;
+//         justify-content: center; 
+//         flex-direction: column;
+//         color: white;
+//         line-height: 50px;
+//     }
+
+//     h6 {
+//         font-size: 22px;
+//         font-weight: bold;
+//     }
+// }
+
+// .div-footer1-c {
+//     min-height: 100%;
+//     grid-area: uno;
+//     border-right: 0.5px solid rgb(147, 169, 221);
+// }
+// .div-footer2-c {
+//     min-height: 100%;
+//     grid-area: dos;
+//     border: 0.5px solid rgb(147, 169, 221);
+// }
+// .div-footer3-c {
+//     max-height: 100%;
+//     grid-area: tres;
+//     border: 0.5px solid rgb(147, 169, 221);
+    
+// }
+// .div-footer4-c {
+//     max-height: 100%;
+//     grid-area: cuatro;
+//     border: 0.5px solid rgb(147, 169, 221);
+// }
 
 
 
@@ -841,7 +987,7 @@ $mapawidget: (
 .section-footer {
     
     min-width: 200%;
-    background-color: #3264a8;
+    background-color: #5783bc;
     font-size: 18px;
     
     
@@ -860,7 +1006,7 @@ $mapawidget: (
         justify-content: center; 
         flex-direction: column;
         color: white;
-        line-height: 25px;
+        line-height: 50px;
     }
 
     h6 {
@@ -919,7 +1065,7 @@ $mapawidget: (
 .section-footer-p {
     
     min-width: 200%;
-    background-color: #3264a8;
+    background-color: #5783bc;
     font-size: 18px;
     
     
@@ -969,38 +1115,38 @@ $mapawidget: (
 }
 
 // BOTONES REDES SOCIALES
-.fa-facebook:hover {
+    .bi-facebook:hover {
     color:#3B5998;
     
     }
-    .fa-twitter:hover {
+    .bi-twitter:hover {
     color:#55acee;
     }
-    .fa-whatsapp:hover{
+    .bi-whatsapp:hover{
     color: greenyellow;
     }
-    .fa-instagram:hover{
+    .bi-instagram:hover{
     color:violet;
     }
-    .fa-facebook {
+    .bi-facebook {
     min-width: 25px;
     color: white;
     }
-    .fa-twitter {
+    .bi-twitter {
     min-width: 25px;
     color: white;
     }
-    .fa-whatsapp {
+    .bi-whatsapp {
     min-width: 25px;
     color: white;
     }
-    .fa-instagram {
+    .bi-instagram {
     min-width: 25px;
     color:white;
     }
-    .fa-map-marker {
+    .bi-map {
         color: white;
     }
-    .fa-map-marker:hover {
-        color: yellow;
+    .bi-map:hover {
+        color: orange;
     }
