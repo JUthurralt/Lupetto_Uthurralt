@@ -47,8 +47,6 @@ aside.sidebar {
     margin-right: 0%;
 }
 
-
-
 .pago {
     color: rgb(69, 111, 112);
     font-family: 'Roboto', sans-serif;
@@ -263,6 +261,7 @@ body {
     background-color: #e9ecfd;
     color: black;
     font-family:'Roboto', sans-serif;
+    min-height: 100%;
 }
 
 
@@ -397,9 +396,9 @@ nav{
 }
 
 .contenedor .sidebar {
-     min-height: 50%;
+    min-height: 50%;
     grid-area: sidebar;
-     min-width: fit-content;
+    min-width: fit-content;
 }
 
 
@@ -553,10 +552,12 @@ $mapawidget: (
     .contenedor{
         display: grid;
         grid-template-columns: auto auto;
-        grid-template-rows: auto auto auto auto;
+        grid-template-rows: auto auto auto auto auto auto;
         grid-template-areas:"header header"
                             "nav nav"
                             "sidebar padregrid"
+                            "cuestionario cuestionario"
+                            "container-dudas container-dudas"
                             "footergrid-p footergrid-p";
     }
     .header {
@@ -606,10 +607,6 @@ $mapawidget: (
         display: flex;
         flex-direction: column;
     }
-    footer {
-        min-height: 20px;
-    }
-
 }
 
 @media screen and (min-width: 768px) {
@@ -625,8 +622,7 @@ $mapawidget: (
     }
     .padregrid {
         display: inline-flex;
-        }
-        
+        }  
 }
 
 @media screen and (min-width:992px) {
@@ -640,13 +636,12 @@ $mapawidget: (
     .padregrid {
         display: grid;
         }
-    
 }
 
 @media screen and (min-width:1200px) {
     .contenedor {
         display: grid;
-        grid-template-columns: auto auto auto;
+        grid-template-columns: auto 1fr auto;
         grid-template-rows: auto auto auto auto auto;
         grid-template-areas:"header header header"
                             "nav nav nav"
@@ -668,9 +663,6 @@ $mapawidget: (
     .padregrid {
         display: grid;
     }
-    footer{
-        min-height: 0px;
-    }
 }
 // TERMINA MOBILE DEMAS PAGINAS
 
@@ -685,11 +677,13 @@ $mapawidget: (
     h4 {
         font-size: 15px;
     }
+
 //  RESPONSIVE CONTACTO
 
-// .contenedor > div,
-// .contenedor .header-c,
-// .contenedor #dudas,
+// .contenedor > div 
+// .contendeor .header-c,
+// .contenedor .header1-c
+// .contenedor #cuestionario,
 // .contenedor #container-dudas,
 // .contenedor .footergrid-c {
 //     background: #e9ecfd;
@@ -702,10 +696,19 @@ $mapawidget: (
 //         grid-template-columns: auto;
 //         grid-template-rows: auto auto auto auto;
 //         grid-template-areas:"header-c"
-//                             "nav-c"
-//                             "datos"
+//                             "header1-c"
+//                             "cuestionario"
 //                             "container-dudas"
 //                             "footergrid-c";
+//     }
+//     .header-c {
+//         grid-area: header-c;
+//     }
+//     .header1-c {
+//         grid-area: header1-c;
+//     }
+//     #cuestionario {
+//         grid-area: cuestionario;
 //     }
 //     #container-dudas {
 //         grid-area: container-dudas;
@@ -714,6 +717,9 @@ $mapawidget: (
 //         min-width: 100%;
 //         font-size: 30px;
 //         max-height: 90%;
+//     }
+//     .footergrid-c {
+//         grid
 //     }
 // }
 
@@ -964,10 +970,10 @@ $mapawidget: (
     }
 }
 
+
 // NUEVO FOOTER
+
 .footergrid {
-    min-height: 100%;
-    min-width: 100%;
     padding: 0px;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -983,24 +989,14 @@ $mapawidget: (
     grid-template-rows: 1fr 1fr;
     grid-template-areas: "uno dos"
                         "tres cuatro";
-}
-
-.section-footer {
-    
     min-width: 200%;
+    min-height: 50%;
     background-color: #5783bc;
     font-size: 18px;
-    
-    
-    
-    .div-footer1,
-    .div-footer2, 
-    .div-footer3,
-    .div-footer4 {
 
-        padding: 18% 0%;
-
-    }
+    
+    
+    
         p, h6 {
         display: flex;
         align-items: center;
@@ -1016,42 +1012,52 @@ $mapawidget: (
     }
 }
 
+
 .div-footer1 {
 
-    min-height: 100%;
+    min-height: auto;
     grid-area: uno;
     border: 0.5px solid rgb(147, 169, 221);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 .div-footer2 {
 
-    min-height: 100%;
+    min-height: auto;
     grid-area: dos;
     border: 0.5px solid rgb(147, 169, 221);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 .div-footer3 {
 
-    min-height: 100%;
+    min-height: auto;
     grid-area: tres;
     border: 0.5px solid rgb(147, 169, 221);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 .div-footer4 {
 
-    min-height: 100%;
+    min-height: auto;
     min-width: auto;
     grid-area: cuatro;
     border: 0.5px solid rgb(147, 169, 221);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 // FOOTER DEMAS PAGINAS
 .footergrid-p {
-    min-height: 100%;
-    min-width: 100%;
     padding: 0px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
     margin: 0%;
-    
 }
 
 
@@ -1066,19 +1072,10 @@ $mapawidget: (
 .section-footer-p {
     
     min-width: 200%;
+    min-height: 25%;
     background-color: #5783bc;
     font-size: 18px;
     
-    
-    
-    .div-footer1-p,
-    .div-footer2-p, 
-    .div-footer3-p,
-    .div-footer4-p {
-
-        padding: 18% 0%;
-
-    }
         p, h6 {
         display: flex;
         align-items: center;
@@ -1095,24 +1092,37 @@ $mapawidget: (
 }
 
 .div-footer1-p {
-    min-height: 100%;
+    min-height: auto;
     grid-area: uno;
-    border-right: 0.5px solid rgb(147, 169, 221);
+    border: 0.5px solid rgb(147, 169, 221);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
 }
 .div-footer2-p {
-    min-height: 100%;
+    min-height: auto;
     grid-area: dos;
-    // border: 0.5px solid rgb(147, 169, 221);
+    border: 0.5px solid rgb(147, 169, 221);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 .div-footer3-p {
-    max-height: 50%;
+    max-height: auto;
     grid-area: tres;
     border: 0.5px solid rgb(147, 169, 221);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 .div-footer4-p {
-    max-height: 50%;
+    max-height: auto;
     grid-area: cuatro;
     border: 0.5px solid rgb(147, 169, 221);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 // BOTONES REDES SOCIALES
