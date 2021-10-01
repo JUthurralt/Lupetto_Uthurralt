@@ -352,17 +352,15 @@ body {
 }
 
 .header1 {
+  background: rgba(156, 211, 245, 0.753);
+  color: #456f70;
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   -ms-grid-column-span: 3;
   grid-area: header-index;
-  background: rgba(156, 211, 245, 0.753);
-  color: #456f70;
   background-image: -webkit-gradient(linear, left top, left bottom, from(cornsilk), to(rgba(156, 211, 245, 0.753)));
   background-image: linear-gradient(to bottom, cornsilk, rgba(156, 211, 245, 0.753));
-  max-height: -webkit-fit-content;
-  max-height: -moz-fit-content;
-  max-height: fit-content;
+  height: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -376,7 +374,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 5% 10%;
+  padding: 60px 10%;
 }
 
 .header1__nav {
@@ -552,7 +550,7 @@ nav {
   grid-area: footergrid-p;
 }
 
-@media screen and (min-width: 320px) {
+@media screen and (min-width: 320px) and (max-width: 575px) {
   .contenedor-index {
     display: -ms-grid;
     display: grid;
